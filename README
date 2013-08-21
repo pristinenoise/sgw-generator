@@ -1,0 +1,11 @@
+## How to use this
+
+* Install ruby
+* Install git
+* go to terminal, clone this repository
+* cd inside repository, run "bundle install"
+* create a file called credentials.yml, that looks like credentials_example.yml, but with valid login info
+* look at the data inside https://docs.google.com/spreadsheet/ccc?key=0Ahv3gKBkfcOCdG53QnZXR1NOa3BGSGZWSmlDN3FhbWc#gid=0
+* run ruby generate_template.rb
+* open up in a browser mailchimp_result.html
+* modify mailchimp_template.html.erb to tweak styles, and then rerun
