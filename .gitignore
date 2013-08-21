@@ -1,0 +1,4 @@
+*.tmp
+*.log
+credentials.yml
+*_result.html
