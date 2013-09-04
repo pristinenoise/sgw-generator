@@ -323,34 +323,39 @@
 			* @tab Footer
 			* @section utility bar style
 			* @tip Set the background color and border for your email's footer utility bar.
-			*/
+  */
 			#utility div{
 				/*@editable*/ text-align:center;
 			}
 
-      div.section {
+      p.section {
         margin-bottom: 1.5em;
       }
 
-      .item_text {
+      p.item_title, p.item_text, p.item_subtext {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      p.item_text {
         font-size: 13px;
       }
 
-      .item_subtext {
+      p.item_subtext {
         font-size: 13px;
         display: block;
         font-style: italic;
       }
 
-      .item {
+      p.item {
         margin-bottom: 15px;
       }
 
-      .h3.section_title {
+      p.h3.section_title {
         margin: 30px 0px 15px 0px;
       }
 
-      .bodyContent .item a.item_title_link {
+      .bodyContent p.item_title a.item_title_link {
         font-size: 18px;
         color: #0066ff;
         font-weight: bold;
@@ -431,24 +436,24 @@
 
                                                               <% sections.each do |section| -%>
                                                                 <% if data[section] && data[section]['items'] -%>
-                                                                  <div class="section">
-                                                                    <span class="h3 section_title"><%= section %></span>
+                                                                  <p class="section">
+                                                                    <p class="h3 section_title"><%= section %></p>
 
                                                                     <% data[section]['items'].each do |item| -%>
 
-                                                                      <div class="item">
-                                                                        <div class="item_title">
+                                                                      <p class="item">
+                                                                        <p class="item_title">
                                                                            <a href="<%=item[:url] %>" class="item_title_link">
                                                                             <%=item[:title] %> 
                                                                            </a>   
-                                                                        </div>
-                                                                        <span class="item_text"><%= item[:value] %></span>
+                                                                        </p>
+                                                                        <p class="item_text"><%= item[:value] %></p>
                                                                         <% unless item[:subtext].empty? -%>
-                                                                          <span class="item_subtext"><%=item[:subtext] %></span>
+                                                                          <p class="item_subtext"><%=item[:subtext] %></p>
                                                                         <% end -%>
-                                                                      </div>
+                                                                      </p>
                                                                     <% end -%>
-                                                                  </div>
+                                                                  </p>
                                                                 <% end -%>
                                                               <% end -%>
                                                             </div>

@@ -33,7 +33,7 @@ data = Hash.new { |h,k| h[k] = {} }
 end
 
 
-sections = ["New Games", "News", "Game Design", "Crowdfunding", "Conventions"]
+sections = ["New Games", "News", "Conversations", "Crowdfunding", "Techniques", "Conventions"]
 
 template = ERB.new(File.read("mailchimp_template.html.erb"), nil, "-")
 
