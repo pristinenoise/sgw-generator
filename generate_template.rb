@@ -33,9 +33,9 @@ data = Hash.new { |h,k| h[k] = {} }
 end
 
 
-sections = ["New Games", "News", "Conversations", "Crowdfunding", "Techniques", "Conventions"]
+sections = ["New Games",  "News", "Conversations", "Crowdfunding", "Techniques", "Conventions", "Meanwhile..."]
 
 template = ERB.new(File.read("mailchimp_template.html.erb"), nil, "-")
 
-File.open("mailchimp_result.html", "w") { |f| f.puts(template.result) }
+File.open("/Users/jamesws3/Dropbox/mailchimp_result.html", "w") { |f| f.puts(template.result) }
 
